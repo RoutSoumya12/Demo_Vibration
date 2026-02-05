@@ -8,6 +8,8 @@ import android.media.AudioAttributes;
 import android.provider.Settings;
 import android.content.Context;
 import java.util.List;
+import android.widget.Toast;
+
 
 public class Vibration {
     private final Vibrator vibrator;
@@ -32,6 +34,11 @@ public class Vibration {
                            .setUsage(android.os.VibrationAttributes.USAGE_TOUCH)
                            .build());
                }
+                Toast.makeText(
+                        context,
+                        "Haptic feedback triggered (USAGE_TOUCH)",
+                        Toast.LENGTH_SHORT
+                ).show();
            }
            else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
                     Build.VERSION.SDK_INT <= Build.VERSION_CODES.R) {

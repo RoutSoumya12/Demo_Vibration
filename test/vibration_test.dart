@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vibration/vibration.dart';
+import 'package:demo_vibration/demo_vibration.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +25,7 @@ void main() {
     test(
       'returns false',
       () async {
-        bool? hasVibrator = await Vibration.hasVibrator();
+        bool? hasVibrator = await DemoVibration.hasVibrator();
 
         expect(
           hasVibrator,
@@ -40,7 +40,7 @@ void main() {
         throw PlatformException(code: 'error');
       });
 
-      final hasVibrator = await Vibration.hasVibrator();
+      final hasVibrator = await DemoVibration.hasVibrator();
 
       throwsA(isA<PlatformException>());
       expect(hasVibrator, isFalse);
@@ -52,7 +52,7 @@ void main() {
         throw UnsupportedError('error');
       });
 
-      final hasVibrator = await Vibration.hasVibrator();
+      final hasVibrator = await DemoVibration.hasVibrator();
 
       throwsA(isA<UnsupportedError>());
       expect(hasVibrator, isFalse);
@@ -63,7 +63,7 @@ void main() {
     test(
       'returns false',
       () async {
-        bool? hasAmplitudeControl = await Vibration.hasAmplitudeControl();
+        bool? hasAmplitudeControl = await DemoVibration.hasAmplitudeControl();
 
         expect(hasAmplitudeControl, isFalse);
       },
@@ -75,7 +75,7 @@ void main() {
         throw PlatformException(code: 'error');
       });
 
-      final hasAmplitudeControl = await Vibration.hasAmplitudeControl();
+      final hasAmplitudeControl = await DemoVibration.hasAmplitudeControl();
 
       throwsA(isA<PlatformException>());
       expect(hasAmplitudeControl, isFalse);
@@ -87,7 +87,7 @@ void main() {
         throw UnsupportedError('error');
       });
 
-      final hasAmplitudeControl = await Vibration.hasAmplitudeControl();
+      final hasAmplitudeControl = await DemoVibration.hasAmplitudeControl();
 
       throwsA(isA<UnsupportedError>());
       expect(hasAmplitudeControl, isFalse);
@@ -97,7 +97,7 @@ void main() {
   test(
     'vibrate with duration',
     () async {
-      await Vibration.vibrate(duration: 100);
+      await DemoVibration.vibrate(duration: 100);
 
       expect(
         log,
@@ -118,7 +118,7 @@ void main() {
   test(
     'vibrate with pattern',
     () async {
-      await Vibration.vibrate(pattern: [100, 200, 400], repeat: 1);
+      await DemoVibration.vibrate(pattern: [100, 200, 400], repeat: 1);
 
       expect(
         log,
@@ -139,7 +139,7 @@ void main() {
   test(
     'cancel vibration',
     () async {
-      await Vibration.cancel();
+      await DemoVibration.cancel();
 
       expect(
         log,

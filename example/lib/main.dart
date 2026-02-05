@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vibration/vibration.dart';
-import 'package:vibration/vibration_presets.dart';
+import 'package:demo_vibration/demo_vibration.dart';
+import 'package:demo_vibration/vibration_presets.dart';
 
 void main() => runApp(VibratingApp());
 
@@ -63,7 +63,7 @@ class VibratingApp extends StatelessWidget {
                     onPressed: () {
                       showSnackBar(context, duration: 500);
 
-                      Vibration.vibrate();
+                      DemoVibration.vibrate();
                     },
                   ),
                   ElevatedButton(
@@ -71,7 +71,7 @@ class VibratingApp extends StatelessWidget {
                     onPressed: () {
                       showSnackBar(context, duration: 1000);
 
-                      Vibration.vibrate(duration: 1000);
+                      DemoVibration.vibrate(duration: 1000);
                     },
                   ),
                   ElevatedButton(
@@ -90,7 +90,7 @@ class VibratingApp extends StatelessWidget {
 
                       showSnackBar(context, pattern: pattern);
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         pattern: pattern,
                       );
                     },
@@ -111,7 +111,7 @@ class VibratingApp extends StatelessWidget {
 
                       showSnackBar(context, pattern: pattern);
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         pattern: pattern,
                         intensities: [0, 128, 0, 255, 0, 64, 0, 255],
                       );
@@ -132,7 +132,7 @@ class VibratingApp extends StatelessWidget {
                     onPressed: () {
                       showSnackBar(context, duration: 1000);
 
-                      Vibration.vibrate(duration: 1000, sharpness: 0.0);
+                      DemoVibration.vibrate(duration: 1000, sharpness: 0.0);
                     },
                   ),
                   ElevatedButton(
@@ -140,7 +140,7 @@ class VibratingApp extends StatelessWidget {
                     onPressed: () {
                       showSnackBar(context, duration: 1000);
 
-                      Vibration.vibrate(duration: 1000, sharpness: 0.5);
+                      DemoVibration.vibrate(duration: 1000, sharpness: 0.5);
                     },
                   ),
                   ElevatedButton(
@@ -148,7 +148,7 @@ class VibratingApp extends StatelessWidget {
                     onPressed: () {
                       showSnackBar(context, duration: 1000);
 
-                      Vibration.vibrate(duration: 1000, sharpness: 1.0);
+                      DemoVibration.vibrate(duration: 1000, sharpness: 1.0);
                     },
                   ),
                   SizedBox(height: 20),
@@ -172,7 +172,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.singleShortBuzz,
                       );
                     },
@@ -188,7 +188,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.doubleBuzz,
                       );
                     },
@@ -204,7 +204,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.tripleBuzz,
                       );
                     },
@@ -220,7 +220,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.longAlarmBuzz,
                       );
                     },
@@ -236,7 +236,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.pulseWave,
                       );
                     },
@@ -252,7 +252,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.progressiveBuzz,
                       );
                     },
@@ -268,7 +268,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.rhythmicBuzz,
                       );
                     },
@@ -284,7 +284,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.gentleReminder,
                       );
                     },
@@ -300,7 +300,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.quickSuccessAlert,
                       );
                     },
@@ -316,7 +316,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.zigZagAlert,
                       );
                     },
@@ -332,7 +332,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.softPulse,
                       );
                     },
@@ -348,7 +348,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.emergencyAlert,
                       );
                     },
@@ -364,7 +364,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.heartbeatVibration,
                       );
                     },
@@ -380,7 +380,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.countdownTimerAlert,
                       );
                     },
@@ -396,7 +396,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.rapidTapFeedback,
                       );
                     },
@@ -412,7 +412,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.dramaticNotification,
                       );
                     },
@@ -428,7 +428,7 @@ class VibratingApp extends StatelessWidget {
                         pattern: preset.pattern,
                       );
 
-                      Vibration.vibrate(
+                      DemoVibration.vibrate(
                         preset: VibrationPreset.urgentBuzzWave,
                       );
                     },

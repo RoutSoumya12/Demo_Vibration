@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:vibration/vibration_presets.dart';
+import 'package:demo_vibration/vibration_presets.dart';
 import 'package:vibration_platform_interface/vibration_platform_interface.dart';
 
 /// Platform-independent vibration methods.
-class Vibration {
+class DemoVibration {
   /// Check if vibrator is available on device.
   ///
   /// Returns `true` if the device has a vibrator, otherwise `false`.
