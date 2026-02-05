@@ -3,8 +3,8 @@
 # Run `pod lib lint vibration.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'vibration'
-  s.version          = '3.0.0'
+  s.name             = 'demo_vibration'
+  s.version          = '1.0.0'
   s.summary          = 'A plugin for handling Vibration API on iOS, Android, web and OpenHarmony.'
   s.description      = <<-DESC
 A plugin for handling Vibration API on iOS, Android, web and OpenHarmony.
