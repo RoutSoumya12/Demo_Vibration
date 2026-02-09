@@ -1,7 +1,7 @@
 name: demo_vibration
 description: A plugin for handling Vibration API on iOS, Android, web and OpenHarmony.
-version: 1.0.0
-homepage: https://github.com/RoutSoumya12/Demo_Vibration
+version: 1.0.3
+homepage: https://dev.azure.com/SGMobileTeam/Infinium/_git/apps_white-label-starter
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

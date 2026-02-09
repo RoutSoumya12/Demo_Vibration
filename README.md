@@ -10,13 +10,13 @@ A plugin for handling Vibration API on iOS, Android, and web. [API docs.](https:
 
    ```yml
    dependencies:
-     vibration: ^3.1.3
+     demo_vibration: 1.0.1
    ```
 
 2. Import package:
 
    ```dart
-   import 'package:vibration/vibration.dart';
+   import 'package:demo_vibration/demo_vibration.dart';
    ```
 
 ## Methods
@@ -26,8 +26,8 @@ A plugin for handling Vibration API on iOS, Android, and web. [API docs.](https:
 Check if the target device has vibration capabilities. Not required when using other methods.
 
 ```dart
-if (await Vibration.hasVibrator()) {
-    Vibration.vibrate();
+if (await DemoVibration.hasVibrator()) {
+    DemoVibration.vibrate();
 }
 ```
 
@@ -37,8 +37,8 @@ Check if the target device has the ability to control the vibration amplitude,
 introduced in Android 8.0 Oreo - false for all earlier API levels.
 
 ```dart
-if (await Vibration.hasAmplitudeControl()) {
-    Vibration.vibrate(amplitude: 128);
+if (await DemoVibration.hasAmplitudeControl()) {
+    DemoVibration.vibrate(amplitude: 128);
 }
 ```
 
@@ -50,11 +50,11 @@ see [`hasVibrator`](#hasVibrator)).
 
 ```dart
 if (await Vibration.hasCustomVibrationsSupport()) {
-    Vibration.vibrate(duration: 1000);
+    DemoVibration.vibrate(duration: 1000);
 } else {
     Vibration.vibrate();
     await Future.delayed(Duration(milliseconds: 500));
-    Vibration.vibrate();
+    DemoVibration.vibrate();
 }
 ```
 
@@ -73,7 +73,7 @@ if (await Vibration.hasCustomVibrationsSupport()) {
 #### With specific duration (for example, 1 second):
 
 ```dart
-Vibration.vibrate(duration: 1000);
+DemoVibration.vibrate(duration: 1000);
 ```
 
 Default duration is 500ms.
@@ -81,19 +81,19 @@ Default duration is 500ms.
 #### With specific duration and specific amplitude (if supported):
 
 ```dart
-Vibration.vibrate(duration: 1000, amplitude: 128);
+DemoVibration.vibrate(duration: 1000, amplitude: 128);
 ```
 
 #### With pattern (wait 500ms, vibrate 1s, wait 500ms, vibrate 2s):
 
 ```dart
-Vibration.vibrate(pattern: [500, 1000, 500, 2000]);
+DemoVibration.vibrate(pattern: [500, 1000, 500, 2000]);
 ```
 
 #### With pattern (wait 500ms, vibrate 1s, wait 500ms, vibrate 2s) at varying intensities (1 - min, 255 - max):
 
 ```dart
-Vibration.vibrate(pattern: [500, 1000, 500, 2000], intensities: [1, 255]);
+DemoVibration.vibrate(pattern: [500, 1000, 500, 2000], intensities: [1, 255]);
 ```
 
 #### With vibration presets:
@@ -101,7 +101,7 @@ Vibration.vibrate(pattern: [500, 1000, 500, 2000], intensities: [1, 255]);
 You can use predefined vibration presets for common use cases.
 
 ```dart
-Vibration.vibrate(preset: VibrationPreset.alarm);
+DemoVibration.vibrate(preset: VibrationPreset.alarm);
 ```
 
 Available presets:
